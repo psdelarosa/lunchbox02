@@ -11,13 +11,13 @@ import Footer from './components/footer'
 
 const menuItems = days.days[0];
 
-let DaysNav2 = props => {
+let DaysNav = props => {
     return (
         <ul className="days-list">
             {Object.keys(props.days).map((day) => 
                 <li key={day} onClick={(event) => props.set(event, day)} className={props.selected === day ? "selected-button" : "days-button"}>
                 <div>{day}<br /></div> 
-                {(props.days[day] === undefined ? day : props.days[day].title)}
+                {(props.days[day] === undefined ? null : props.days[day].title)}
                 </li>
             )}
         </ul>
@@ -52,6 +52,7 @@ class App extends Component {
     newState[day].title = title
     newState[day].price = price
     this.setState({newState})
+    console.log(this.state.days)
   }
 
   setDay = (e, day) => {
@@ -95,20 +96,14 @@ class App extends Component {
 
         <Header />
 
-        <DaysNav2 days={this.state.days} 
+        <DaysNav days={this.state.days} 
             selected={this.state.selectedDay}
             set={this.setDay}
         />
 
         <DayMenu thisDay={this.state.selectedDay} />
 
-        <FoodList items={this.state.foodItemsPerDay} day={this.state.selectedDay} open={this.openModal} clicker={this.selectClick}
-            MONDAY={this.state.MONDAY}
-            TUESDAY={this.state.TUESDAY}
-            WEDNESDAY={this.state.WEDNESDAY}
-            THURSDAY={this.state.THURSDAY}
-            FRIDAY={this.state.FRIDAY}
-
+        <FoodList items={this.state.foodItemsPerDay} selectedDay={this.state.selectedDay} open={this.openModal} clicker={this.selectClick} days={this.state.days}
         />
 
         <Modal close={this.closeModal} modalState={this.state.modal} modalTitle={this.state.modalTitle} day={this.state.selectedDay} modalPrice={this.state.modalPrice} clicker={this.selectClick}/>

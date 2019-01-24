@@ -146,7 +146,15 @@ body {
     cursor: pointer;
     animation: fade-in 0.5s forwards;
     opacity: 0.5;
+    -moz-opacity:0.5;
+    filter:alpha(opacity=50);
     transition: 0.2s;
+  }
+
+  .transparent {
+    zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
   }
 
   .food-box-selected .select-button {
