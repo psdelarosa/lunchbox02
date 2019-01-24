@@ -1,14 +1,436 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f3f3f3;
+  }
+  
+  .navbar {
+    width: 100%;
+    background-color: #274C77;
+    height: 60px;
+    display: flex;
+    color: white;
+  }
+  
+  .logo-space {
+    margin: 0;
+    padding-left: 20px;
+    flex-grow: 1;
+  }
+  
+  .item-count {
+    text-align: right;
+    padding-right: 20px;
+    flex-grow: 1;
+  }
+  
+  .header {
+    height: 60vh;
+    background-color: gray;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .header-text-box {
+    text-align: center;
+    padding-bottom: 100px;
+  }
+  
+  .header-text-box h3 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-text-box button {
+    padding: 15px;
+    border: none;
+    background-color: green;
+    color: white;
+  }
+  
+  .days-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  .days-button {
+    padding: 15px;
+    height: 50px;
+    background-color: #E7ECEF;
+    border: none;
+    margin: 5px;
+    color: #274C77;
+    font-size: 1em;
+    transition: 0.1s;
+    outline: none;
+    cursor: pointer;
+    width: 20%;
+  }
+  
+  .selected-button {
+    padding: 15px;
+    background-color:#274C77;
+    border: none;
+    margin: 5px;
+    color: white;
+    font-size: 1em;
+    transition: 0.1s;
+    outline: none;
+    cursor: pointer;
+    width: 20%;
+  }
+  
+  .selected-button:focus {
+    outline: none;
+  }
+  
+  
+  .days-button:hover {
+    background-color: #274C77;
+    transition: 0.1s;
+    color: white;
+    outline: none;
+  }
+  
+  .main-wrapper {
+    max-width: 1024px;
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+  
+  .food-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .food-box {
+    background-color:white;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    cursor: pointer;
+    animation: fade-in 0.5s forwards;
+    transition: 0.2s;
+  }
+  
+  .food-box:hover {
+    box-shadow: 0px 3px 8px lightgray;
+    transition: 0.2s;
+  }
+  
+  .food-image-box {
+    width: 100%;
+    height: 189px;
+    background-color: gray;
+  }
+
+  
+  .food-box-selected {
+    background-color:white;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    cursor: pointer;
+    animation: fade-in 0.5s forwards;
+    opacity: 0.5;
+    transition: 0.2s;
+  }
+
+  .food-box-selected .select-button {
+      background-color: #C20047;
+  }
+  
+  .food-lower-box {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .food-text-box {
+    padding: 15px;
+    width: 80%;
+  }
+  
+  .food-price {
+    font-size: 0.7em;
+  }
+  
+  .select-button-place {
+    width: 20%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .select-button {
+    background-color: #274C77;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    border: none;
+    margin: auto;
+    font-size: 1.2em;
+
+    transition: 0.2s;
+    z-index: 10;
+  }
+  
+  .select-button:hover {
+    background-color: #6096BA;
+    transition: 0.2s;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+
+  }
+  
+  .select-button:focus {
+    outline: none;
+  }
+  
+  
+  .day-menu-box {
+    text-align: center;
+    margin: 50px auto;  
+  }
+  
+  .day-title {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  .short-line {
+    border-top: 3px solid gray;
+    width: 50px;
+    margin-top: 30px;
+  }
+  
+  .logo-box {
+    margin-bottom: 10px;
+  }
+  
+  .vegan {
+    background-color: #5EBA48;
+    width: auto;
+    border-radius: 50px;
+    font-size: 0.7em;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    color: white;
+  }
+  
+  .modal {
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-left: 20%;
+    margin-top: 200px;
+    height: 350px;
+    width: 60%;
+    z-index: 100;
+    animation: fade-in 0.3s forwards;
+    display: flex;
+  }
+  
+  .modal-close-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .modal-select-button {
+    background-color: #274C77;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    transition: 0.2s;
+    z-index: 10;
+  }
+  
+  .modal-select-button:hover {
+    background-color: #C20047;
+    transition: 0.2s;
+    animation-name: spin;
+    animation-duration: 0.3s;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+  }
+  
+  .modal-select-button-place {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-image-box {
+    width: 50%;
+    height: 100%;
+    background-color: green;
+  }
+  
+  .modal-text-box {
+    padding: 10px;
+    width: 50%;
+  }
+
+  .day-food-title {
+    font-size: 0.8em;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translate3D(0, 5%, 0);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate3D(0, 0, 0);
+    }
+  }
+  
+  .modal-hidden {
+    display: none;
+  }
+  
+  .dark {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top:0;
+    background-color: rgb(0, 0, 0, 0.6);
+    z-index: 99;
+  
+  }
+  
+  .hidden-dark {
+    display: none;
+  }
+
+.subscribe-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.input-email {
+    border: 1px solid #f3f3f3;
+    width: 200px;
+    padding: 10px 20px;
 }
+
+.subscribe-submit {
+    border: 1px solid #274C77;
+    background-color:#274C77;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.subscribe {
+    text-align: center;
+    height: 300px;
+    margin-top: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    background-color: #274C77;
+    padding: 50px 20px;
+    color: white;
+    display: flex;
+    justify-content: center
+}
+
+.footer-column {
+    width: 150px;
+}
+
+.footer-list {
+    list-style-type: none;
+    font-size: 0.8em;
+    line-height: 2em;
+}
+
+.social-media {
+    flex-grow: 1;
+    height: 100px;
+}
+
+.social-media-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+.social-media-list li {
+    padding: 0 20px;
+}
+
+.social-media-list .icon-box {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+
+}
+
+.social-media-list .icon-box:hover {
+    animation-name: spin-social-media;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.social-media-list img {
+    height: 20px;
+    padding-top: 2px;
+}
+
+@keyframes spin-social-media {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(20deg);
+    }
+  }

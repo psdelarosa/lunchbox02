@@ -1,0 +1,216 @@
+{
+    "days" : [
+        {
+            "MONDAY" : [
+                {
+                    "title" : "Beef with Broccoli",
+                    "price" : "$7.50",
+                    "isVegan" : false
+                },
+                {
+                    "title" : "Salt & Pepper Ribs",
+                    "price" : "$12.00",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "Shrimp and Dumplings",
+                    "price" : "$8.00",
+                    "isVegan" : false
+                },
+                {
+                    "title" : "Dimsum Platter",
+                    "price" : "$11.25",
+                    "isVegan" : false
+                },
+                {
+                    "title" : "Roast Pork Belly",
+                    "price" : "$13.00",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "Kung Pao Chicken",
+                    "price" : "$11.25",
+                    "isVegan" : false
+                },
+                {
+                    "title" : "Mushroom Veggie Burger",
+                    "price" : "$18.00",
+                    "isVegan" : true
+                },
+                {
+                    "title" : "Veggie Pasta Salad",
+                    "price" : "$12.00",
+                    "isVegan" : true
+                }
+            ], 
+            "TUESDAY" : [
+                {
+                    "title" : "title food 1 - tuesday",
+                    "price" : "price food 1 - tuesday",
+                    "isVegan" : false
+                },
+                {
+                    "title" : "title food 2 - tuesday",
+                    "price" : "price food 2 - tuesday",
+                    "isVegan" : true
+                }, 
+                {
+                    "title" : "title food 3 - tuesday",
+                    "price" : "price food 3 - tuesday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - tuesday",
+                    "price" : "price food 3 - tuesday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - tuesday",
+                    "price" : "price food 3 - tuesday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - tuesday",
+                    "price" : "price food 3 - tuesday",
+                    "isVegan" : true
+                }, 
+                {
+                    "title" : "title food 3 - tuesday",
+                    "price" : "price food 3 - tuesday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - tuesday",
+                    "price" : "price food 3 - tuesday",
+                    "isVegan" : false
+                }
+            ],
+            "WEDNESDAY" : [
+                {
+                    "title" : "title food 1 - wednesday",
+                    "price" : "price food 1 - wednesday",
+                    "isVegan" : false
+                },
+                {
+                    "title" : "title food 2 - wednesday",
+                    "price" : "price food 2 - wednesday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - wednesday",
+                    "price" : "price food 3 - wednesday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - wednesday",
+                    "price" : "price food 3 - wednesday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - wednesday",
+                    "price" : "price food 3 - wednesday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - wednesday",
+                    "price" : "price food 3 - wednesday",
+                    "isVegan" : true
+                }, 
+                {
+                    "title" : "title food 3 - wednesday",
+                    "price" : "price food 3 - wednesday",
+                    "isVegan" : true
+                }, 
+                {
+                    "title" : "title food 3 - wednesday",
+                    "price" : "price food 3 - wednesday",
+                    "isVegan" : false
+                }
+            ],
+            "THURSDAY" : [
+                {
+                    "title" : "title food 1 - thursday",
+                    "price" : "price food 1 - thursday",
+                    "isVegan" : false
+                },
+                {
+                    "title" : "title food 2 - thursday",
+                    "price" : "price food 2 - thursday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - thursday",
+                    "price" : "price food 3 - thursday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - thursday",
+                    "price" : "price food 3 - thursday",
+                    "isVegan" : true
+                }, 
+                {
+                    "title" : "title food 3 - thursday",
+                    "price" : "price food 3 - thursday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - thursday",
+                    "price" : "price food 3 - thursday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - thursday",
+                    "price" : "price food 3 - thursday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - thursday",
+                    "price" : "price food 3 - thursday",
+                    "isVegan" : true
+                }
+            ],
+            "FRIDAY" : [
+                {
+                    "title" : "title food 1 - friday",
+                    "price" : "price food 1 - friday",
+                    "isVegan" : false
+                },
+                {
+                    "title" : "title food 2 - friday",
+                    "price" : "price food 2 - friday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - friday",
+                    "price" : "price food 3 - friday",
+                    "isVegan" : true
+                }, 
+                {
+                    "title" : "title food 3 - friday",
+                    "price" : "price food 3 - friday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - friday",
+                    "price" : "price food 3 - friday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - friday",
+                    "price" : "price food 3 - friday",
+                    "isVegan" : true
+                }, 
+                {
+                    "title" : "title food 3 - friday",
+                    "price" : "price food 3 - friday",
+                    "isVegan" : false
+                }, 
+                {
+                    "title" : "title food 3 - friday",
+                    "price" : "price food 3 - friday",
+                    "isVegan" : false
+                }
+            ]
+        }
+    ]
+}
