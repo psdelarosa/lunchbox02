@@ -13,7 +13,7 @@ let FoodBox = props => {
           <li key={props.price} className="food-price">{props.price}</li>
         </div>
       <div className="select-button-place">
-        <button className="select-button" onClick={(event, day, title) => props.clicker(event, props.day, props.title)}>+</button>
+        <button className="select-button" onClick={(event, day, title, price) => props.clicker(event, props.day, props.title, props.price)}>+</button>
       </div>
       </div>
     </div>

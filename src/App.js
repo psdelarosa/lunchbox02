@@ -10,23 +10,18 @@ import Subscribe from './components/subscribe'
 import Footer from './components/footer'
 
 const menuItems = days.days[0];
-let daysOfWeek = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY']
 
-let DaysNav = props => {
-  return (
-    <ul className="days-list">
-      {daysOfWeek.map(item => 
-        <div onClick={(event) => props.set(event, item)} key={item} className={props.selected === item ? "selected-button" : "days-button"}>
-            <div className="test">
-                {item} <br/>
-                <div className="day-food-title">
-                {(props[item] === undefined ? null : props[item])}
-                </div>
-            </div> 
-        </div>
-      )}
-    </ul>
-  )
+let DaysNav2 = props => {
+    return (
+        <ul className="days-list">
+            {Object.keys(props.days).map((day) => 
+                <li key={day} onClick={(event) => props.set(event, day)} className={props.selected === day ? "selected-button" : "days-button"}>
+                <div>{day}<br /></div> 
+                {(props.days[day] === undefined ? day : props.days[day].title)}
+                </li>
+            )}
+        </ul>
+    )
 }
 
 class App extends Component {
@@ -35,50 +30,28 @@ class App extends Component {
     this.state = { 
         selectedDay: 'MONDAY',
         foodItemsPerDay: menuItems['MONDAY'],
-        MONDAY: '',
-        TUESDAY: '',
-        WEDNESDAY: '',
-        THURSDAY: '',
-        FRIDAY: '',
+        days: {
+            MONDAY: {},
+            TUESDAY: {},
+            WEDNESDAY: {},
+            THURSDAY: {},
+            FRIDAY: {}
+        },
         modal: false,
         modalTitle: '',
         modalPrice: ''
-     }
+        }
      this.setDay = this.setDay.bind(this)
      this.seclectClick = this.selectClick.bind(this)
-  }
-
-  selectClick = (e, day, title) => {
-    e.preventDefault();
-    switch (day) {
-        case "MONDAY":
-            this.setState({
-                MONDAY: title
-            })
-            break;
-        case "TUESDAY":
-            this.setState({
-                TUESDAY: title
-            })
-            break;
-        case "WEDNESDAY":
-            this.setState({
-                WEDNESDAY: title
-            })
-            break;
-        case "THURSDAY":
-            this.setState({
-                THURSDAY: title
-            })
-            break;
-        case "FRIDAY":
-            this.setState({
-                FRIDAY: title
-            })
-            break;
-        default: 
-
     }
+
+
+  selectClick = (e, day, title, price) => {
+    e.preventDefault();
+    let newState = Object.assign({}, this.state.days)
+    newState[day].title = title
+    newState[day].price = price
+    this.setState({newState})
   }
 
   setDay = (e, day) => {
@@ -122,12 +95,9 @@ class App extends Component {
 
         <Header />
 
-        <DaysNav set={this.setDay} selected={this.state.selectedDay} 
-            MONDAY={this.state.MONDAY}
-            TUESDAY={this.state.TUESDAY}
-            WEDNESDAY={this.state.WEDNESDAY}
-            THURSDAY={this.state.THURSDAY}
-            FRIDAY={this.state.FRIDAY}
+        <DaysNav2 days={this.state.days} 
+            selected={this.state.selectedDay}
+            set={this.setDay}
         />
 
         <DayMenu thisDay={this.state.selectedDay} />
@@ -183,3 +153,7 @@ export default App;
 
 
 //test-branch refactor
+
+// let newState = Object.assign({}, this.state);
+// newState.recipes[1].title = "Tofu Stir Fry and other stuff";
+// this.setState(newState);
