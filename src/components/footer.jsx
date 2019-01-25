@@ -7,6 +7,7 @@ class Footer extends Component {
     render() { 
         return ( 
             <footer>
+                <div class="footer-wrapper">
                 <div className="footer-column">
                     <ul className="footer-list">
                         <li>Help</li>
@@ -40,6 +41,7 @@ class Footer extends Component {
                             <button className="icon-box"><img src={twitter} alt="Twitter"/></button>
                         </li>
                     </ul>
+                </div>
                 </div>
             </footer>
          );

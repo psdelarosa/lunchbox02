@@ -8,16 +8,25 @@ import FoodList from './components/foodbox'
 import Reset from './components/reset'
 import Subscribe from './components/subscribe'
 import Footer from './components/footer'
+const check = require('./images/check.svg');
+
 
 const menuItems = days.days[0];
 
 let DaysNav = props => {
+
     return (
-        <ul className="days-list">
+        <ul className={props.scroll > props.top ? "days-list fixed-nav" : "days-list"} id="days-nav">
             {Object.keys(props.days).map((day) => 
-                <li key={day} onClick={(event) => props.set(event, day)} className={props.selected === day ? "selected-button" : "days-button"}>
-                <div>{day}<br /></div> 
-                {(props.days[day] === undefined ? null : props.days[day].title)}
+                <li key={day} onClick={(event) => props.set(event, day)} className={props.selected === day ? "selected-button" : props.days[day].foodSelected === true ? "selected-button-success" : "days-button"}>
+                <div className={props.days[day].foodSelected === true ? "check" : "check-none"}>
+                    <img src={check}/>
+                </div>
+                <div>{day}<br />
+                    <div className="day-food-title">
+                        {(props.days[day].title === undefined ? null : props.days[day].title)}
+                    </div>
+                </div> 
                 </li>
             )}
         </ul>
@@ -43,16 +52,25 @@ class App extends Component {
         }
      this.setDay = this.setDay.bind(this)
      this.seclectClick = this.selectClick.bind(this)
+     this.handleScroll = this.handleScroll.bind(this)
+     this.unSelect = this.unSelect.bind(this)
     }
 
 
   selectClick = (e, day, title, price) => {
-    e.preventDefault();
-    let newState = Object.assign({}, this.state.days)
-    newState[day].title = title
-    newState[day].price = price
-    this.setState({newState})
-    console.log(this.state.days)
+        e.preventDefault();
+        let newState = Object.assign({}, this.state.days)
+        newState[day].title = title
+        newState[day].price = price
+        newState[day].foodSelected = true
+        this.setState({days: newState})
+        // console.log(this.state.days)
+  }
+
+  unSelect = (e, day) => {
+        let removeItem = Object.assign({}, this.state.days)
+        removeItem[day] = {}
+        this.setState({days: removeItem})
   }
 
   setDay = (e, day) => {
@@ -79,14 +97,35 @@ class App extends Component {
   }
 
   resetCart = () => {
-      this.setState({
-        MONDAY: '',
-        TUESDAY: '',
-        WEDNESDAY: '',
-        THURSDAY: '',
-        FRIDAY: ''
-      })
-  }
+    let newDays = {
+        MONDAY: {},
+        TUESDAY: {},
+        WEDNESDAY: {},
+        THURSDAY: {},
+        FRIDAY: {},
+    }
+    this.setState({days: newDays})
+    }
+
+    handleScroll = () => {
+        this.setState({scroll: window.scrollY})
+    }
+
+    componentDidMount = () => {
+        const el = document.querySelector('#days-nav')
+        this.setState({
+            top: el.offsetTop ,
+            height: el.offsetHeight
+        });
+        window.addEventListener('scroll', this.handleScroll)
+        console.log(`top: ${this.state.top} height: ${this.state.height} offset top ${el.offsetTop}`)
+    }
+    componentDidUpdate() {
+		this.state.scroll > this.state.top ? 
+			document.body.style.paddingTop = `${this.state.height}px` :
+			document.body.style.paddingTop = 0;
+	}
+
 
   render() {
     return (
@@ -95,24 +134,22 @@ class App extends Component {
         <NavList />
 
         <Header />
-
-        <DaysNav days={this.state.days} 
-            selected={this.state.selectedDay}
-            set={this.setDay}
-        />
-
-        <DayMenu thisDay={this.state.selectedDay} />
-
-        <FoodList items={this.state.foodItemsPerDay} selectedDay={this.state.selectedDay} open={this.openModal} clicker={this.selectClick} days={this.state.days}
-        />
-
-        <Modal close={this.closeModal} modalState={this.state.modal} modalTitle={this.state.modalTitle} day={this.state.selectedDay} modalPrice={this.state.modalPrice} clicker={this.selectClick}/>
-
+        <div id="wrapper">
+            <DaysNav days={this.state.days} 
+                selected={this.state.selectedDay}
+                set={this.setDay} scroll={this.state.scroll} top={this.state.top}
+            />
+            <DayMenu thisDay={this.state.selectedDay} />
+            <FoodList items={this.state.foodItemsPerDay} selectedDay={this.state.selectedDay} open={this.openModal} clicker={this.selectClick} days={this.state.days} unSelect={this.unSelect}
+            />
+            <Modal close={this.closeModal} modalState={this.state.modal} modalTitle={this.state.modalTitle} day={this.state.selectedDay} modalPrice={this.state.modalPrice} clicker={this.selectClick}/>
+        </div>
         <Subscribe />
 
         <Footer />
 
-        <Reset reset={this.resetCart}/>
+
+
 
 
       </React.Fragment>
@@ -152,3 +189,4 @@ export default App;
 // let newState = Object.assign({}, this.state);
 // newState.recipes[1].title = "Tofu Stir Fry and other stuff";
 // this.setState(newState);
+
