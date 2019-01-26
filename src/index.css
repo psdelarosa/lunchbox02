@@ -539,11 +539,38 @@ footer {
       display: none;
   }
 
-  .show-cart {
-      display: block;
-  }
+.show-cart {
+    display: block;
+    background-color: white;
+}
 
-  .cart-list {
-      list-style-type: none;
-      padding: 0;
-  }
+.cart-list {
+    padding: 10px 0;
+    margin: auto;
+    width: 300px;
+    border-spacing: 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.cart-list-container {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+}
+
+.cart-list td {
+    text-align: left;
+}
+
+.table-price {
+    width: 50px;
+    text-align: right !important;
+}
+
+.total-bill {
+    padding: 20px 0;
+}
+
+.table-title, .table-price {
+    font-size: 0.8em;
+}

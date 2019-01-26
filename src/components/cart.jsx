@@ -31,27 +31,41 @@ class ShoppingCart extends Component {
 }
 
 let ShoppingCartModal = props => {
-    let cartList = [];
+    let newCart = {}
     let totalPrice = 0;
+
+    //clear out empty days
     for (var x in props.cart) {
         if (props.cart[x].title === undefined) {
-            cartList = cartList
+            totalPrice = totalPrice
         } else {
-            cartList.push(x, props.cart[x].title, props.cart[x].price)
             totalPrice += Number(props.cart[x].price)
+            newCart[x] = {title: props.cart[x].title, price: props.cart[x].price}
         }
     }
 
     return (
         <div className={props.cartModal === false ? "cart-hide" : "show-cart"}>
             <h1>This is the cart</h1>
-            <ul className="cart-list">
-                {cartList.map(item => 
-                    <li key={item}>{isNaN(item) !== true ? '$'+item : item}</li>
-                )}
-            </ul>
-            <div>Total bill: ${totalPrice}</div>
+            <div className="cart-list-container">
+            {Object.keys(newCart).map((item) => 
+                <table className="cart-list" key={item + newCart[item].title} cellSpacing="0">
+                    <tbody>
+                        <tr key={item}>
+                            <td key={item} colSpan="2">{item}</td>
+                            
+                        </tr>
+                        <tr key={newCart[item].price + newCart[item].title}>
+                            <td className='table-title' key={newCart[item].title}>{newCart[item].title}</td>
+                            <td className='table-price' key={newCart[item].price}>${newCart[item].price}</td>
+                        </tr>
+                    </tbody>
+                </table> 
+            )}
+
+            <div className="total-bill">Total bill: ${totalPrice}</div>
             <button onClick={props.closeModal}>close</button>
+            </div>
         </div>
     )
 }
