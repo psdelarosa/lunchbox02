@@ -4,84 +4,84 @@
             "MONDAY" : [
                 {
                     "title" : "Beef with Broccoli",
-                    "price" : "$7.50",
+                    "price" : "7.50",
                     "isVegan" : false
                 },
                 {
                     "title" : "Salt & Pepper Ribs",
-                    "price" : "$12.00",
+                    "price" : "12.00",
                     "isVegan" : false
                 }, 
                 {
                     "title" : "Shrimp and Dumplings",
-                    "price" : "$8.00",
+                    "price" : "8.00",
                     "isVegan" : false
                 },
                 {
                     "title" : "Dimsum Platter",
-                    "price" : "$11.25",
+                    "price" : "11.25",
                     "isVegan" : false
                 },
                 {
                     "title" : "Roast Pork Belly",
-                    "price" : "$13.00",
+                    "price" : "13.00",
                     "isVegan" : false
                 }, 
                 {
                     "title" : "Kung Pao Chicken",
-                    "price" : "$11.25",
+                    "price" : "11.25",
                     "isVegan" : false
                 },
                 {
                     "title" : "Mushroom Veggie Burger",
-                    "price" : "$18.00",
+                    "price" : "18.00",
                     "isVegan" : true
                 },
                 {
                     "title" : "Veggie Pasta Salad",
-                    "price" : "$12.00",
+                    "price" : "12.00",
                     "isVegan" : true
                 }
             ], 
             "TUESDAY" : [
                 {
                     "title" : "title food 1 - tasdfuesday",
-                    "price" : "price food 1 - tuesday",
+                    "price" : "7.50",
                     "isVegan" : false
                 },
                 {
                     "title" : "title food 2 - tuzxcvesday",
-                    "price" : "price food 2 - tuesday",
+                    "price" : "11.63",
                     "isVegan" : true
                 }, 
                 {
                     "title" : "title food 3 - tuasdesday",
-                    "price" : "price food 3 - tughadfesday",
+                    "price" : "10.25",
                     "isVegan" : false
                 }, 
                 {
                     "title" : "title food 3 - tuaasdsdesday",
-                    "price" : "price food 3 - tues23day",
+                    "price" : "11.00",
                     "isVegan" : false
                 }, 
                 {
                     "title" : "title zxcvfood 3 - tuesday",
-                    "price" : "price fofsfdgod 3 - tuesday",
+                    "price" : "8.25",
                     "isVegan" : false
                 }, 
                 {
                     "title" : "title fsdfood 3 - tuesday",
-                    "price" : "price food 3 - tuezxcvsday",
+                    "price" : "8",
                     "isVegan" : true
                 }, 
                 {
                     "title" : "title food 3zxvc - tuesday",
-                    "price" : "price food 3 - tuesday",
+                    "price" : "9.50",
                     "isVegan" : false
                 }, 
                 {
                     "title" : "title foasdod 3 - tuesday",
-                    "price" : "price food 3 - tucvbesday",
+                    "price" : "10.00",
                     "isVegan" : false
                 }
             ],

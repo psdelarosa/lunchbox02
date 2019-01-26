@@ -10,7 +10,7 @@ let FoodBox = props => {
       <div className="food-lower-box">
         <div className="food-text-box">
           <li key={props.title} className="food-title">{props.title}</li>
-          <li key={props.price} className="food-price">{props.price}</li>
+          <li key={props.price} className="food-price">${props.price}</li>
         </div>
       <div className="select-button-place">
         {props.days[props.selectedDay].title !== props.title ? <SelectButton selectedDay={props.selectedDay} title={props.title} price={props.price} clicker={props.clicker}/> : <UnSelect unSelect={props.unSelect} selectedDay={props.selectedDay}/>}

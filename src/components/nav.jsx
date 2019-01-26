@@ -7,9 +7,6 @@ class NavList extends Component {
                 <div className="logo-space">
                     <h3>logo here</h3>
                 </div>
-                <div className="item-count">
-                    <h3>Total items: </h3>
-                </div>
             </div>
          );
     }
