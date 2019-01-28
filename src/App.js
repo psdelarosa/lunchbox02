@@ -14,10 +14,17 @@ const check = require('./images/check.svg');
 const menuItems = days.days[0];
 
 let DaysNav = props => {
+    let mq = window.matchMedia( "(max-width: 1000px)" )
+
+    let MobileNav = () => { 
+        return (
+        <div className="mobile-nav"><h3>test mobile nav</h3></div>
+        )
+    }
 
     return (
-        <div id="wrapper">
-        <ul className={props.scroll > props.top ? "fixed-nav days-list" : "days-list"} id="days-nav">
+        <div id="days-wrapper"  className={props.scroll > props.top ? "fixed-nav" : ""}>
+        <ul className="days-list" id="days-nav">
             {Object.keys(props.days).map((day) => 
                 <li key={day} onClick={(event) => props.set(event, day)} className={props.selected === day ? "selected-button" : props.days[day].foodSelected === true ? "selected-button-success" : "days-button"}>
                 <div className={props.days[day].foodSelected === true ? "check" : "check-none"}>
@@ -31,6 +38,7 @@ let DaysNav = props => {
                 </li>
             )}
         </ul>
+        {mq.matches === true ? <MobileNav /> : null}
         </div>
     )
 }
@@ -125,7 +133,7 @@ class App extends Component {
     }
 
     componentDidMount = () => {
-        const el = document.querySelector('#days-nav')
+        const el = document.querySelector('#days-wrapper')
         this.setState({
             top: el.offsetTop ,
             height: el.offsetHeight
