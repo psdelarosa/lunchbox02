@@ -13,7 +13,14 @@ class Modal extends Component {
                             <h3>{this.props.modalTitle}</h3>
                             <p>${this.props.modalPrice}</p>
                             <hr />
-                            <p>Nutritional value here ... </p>
+                            <ul>
+                                <li>Calories</li>
+                                <li>Total Fat</li> 
+                                <li>Cholesterol</li>
+                                <li>Sodium</li>
+                                <li>Total Carbohydrates</li> 
+                                <li>Protein</li>
+                            </ul>
                             <div className="modal-select-button-place">
                                 <button onClick={(event, day, title) => this.props.clicker(event, this.props.day, this.props.modalTitle)} className="modal-select-button">+</button>
                             </div>

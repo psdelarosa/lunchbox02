@@ -11,15 +11,17 @@ import ShoppingCart from './components/cart'
 const check = require('./images/check.svg');
 
 // TODO:
-// fix modal styling
-// header image and text
+// style - header text
 // shopping cart... style and make modal
 // complete JSON file
 // fix opacity issue in firefox
 // mobile NAV
 // escape key in modal
-// DONE -- header image 
-// DONE -- integer float in shopping cart total
+// Check out button inside shopping cart
+// Nutritional values from math.random
+// Format nutritional values
+// custom fonts
+
 
 
 const menuItems = days.days[0];
@@ -43,7 +45,7 @@ let DaysNav = props => {
                 </div>
                 <div>{day}<br />
                     <div className="day-food-title">
-                        {(props.days[day].title === undefined ? null : props.days[day].title)}
+                        {(props.days[day].title === undefined ? null : (props.days[day].title.length > 18 ? props.days[day].title.substring(0,18) + '...' : props.days[day].title))}
                     </div>
                 </div> 
                 </li>

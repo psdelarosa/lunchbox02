@@ -3,86 +3,102 @@
         {
             "MONDAY" : [
                 {
-                    "title" : "Beef with Broccoli",
+                    "title" : "French Tuna Salad Sandwich",
                     "price" : "7.50",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/monday/tuna.jpg"
                 },
                 {
-                    "title" : "Salt & Pepper Ribs",
+                    "title" : "Pesto Chicken Roll",
                     "price" : "12.00",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/monday/pesto-chicken-roll.jpg"
                 }, 
                 {
                     "title" : "Shrimp and Dumplings",
                     "price" : "8.00",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/monday/shrimp-dumplings.jpg"
                 },
                 {
-                    "title" : "Dimsum Platter",
+                    "title" : "Chicken Salad ",
                     "price" : "11.25",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/monday/chicken-salad.jpg"
                 },
                 {
-                    "title" : "Roast Pork Belly",
+                    "title" : "Moroccan chicken pockets",
                     "price" : "13.00",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/monday/moroccan-chicken.jpg"
                 }, 
                 {
-                    "title" : "Kung Pao Chicken",
+                    "title" : "Tuna and lemon mayonnaise wraps",
                     "price" : "11.25",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/monday/tuna-lemon-wraps.jpg"
                 },
                 {
                     "title" : "Mushroom Veggie Burger",
                     "price" : "18.00",
-                    "isVegan" : true
+                    "isVegan" : true,
+                    "image" : "../images/monday/mushroom-veggie-burger.jpeg"
                 },
                 {
                     "title" : "Veggie Pasta Salad",
                     "price" : "12.00",
-                    "isVegan" : true
+                    "isVegan" : true,
+                    "image" : "../images/monday/veggie-pasta-salad.jpg"
                 }
             ], 
             "TUESDAY" : [
                 {
                     "title" : "House Burger",
                     "price" : "7.50",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/tuesday/house-burger.jpg"
                 },
                 {
                     "title" : "Cobb Salad",
                     "price" : "11.00",
-                    "isVegan" : true
+                    "isVegan" : true,
+                    "image" : "../images/tuesday/cobb-salad.jpeg"
                 }, 
                 {
                     "title" : "Jambalaya",
                     "price" : "10.00",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/tuesday/jambalaya.jpg"
                 }, 
                 {
                     "title" : "Mac & Cheese",
                     "price" : "11.00",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/tuesday/mac-cheese.jpg"
                 }, 
                 {
                     "title" : "Fried Chicken",
                     "price" : "8.00",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/tuesday/chicken-potatoes.jpg"
                 }, 
                 {
                     "title" : "Avocado Salad",
                     "price" : "8.00",
-                    "isVegan" : true
+                    "isVegan" : true,
+                    "image" : "../images/tuesday/avocad-salad.jpg"
                 }, 
                 {
                     "title" : "Buffalo Wings",
                     "price" : "9.50",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/tuesday/buffalo-wings.jpg"
                 }, 
                 {
                     "title" : "Bacon Mushroom Burger",
                     "price" : "10.00",
-                    "isVegan" : false
+                    "isVegan" : false,
+                    "image" : "../images/tuesday/bacon-mushroom-burger.jpg"
                 }
             ],
             "WEDNESDAY" : [
@@ -171,43 +187,43 @@
             ],
             "FRIDAY" : [
                 {
-                    "title" : "title food 1 - fridfghday",
-                    "price" : "price foodghd 1 - friday",
+                    "title" : "Sesame-Ginger Soba Noodle Salad",
+                    "price" : "12.00",
                     "isVegan" : false
                 },
                 {
-                    "title" : "title focvbod 2 - friday",
-                    "price" : "price food 2 - frihjkday",
+                    "title" : "Salami and Cream Cheese Sandwich",
+                    "price" : "11.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title food 3 - friday",
-                    "price" : "price food3456 3 - friday",
+                    "title" : "Sun-Dried Tomato Pasta Salad",
+                    "price" : "12.00",
                     "isVegan" : true
                 }, 
                 {
-                    "title" : "title food 3 - fr347iday",
-                    "price" : "price food 3 - friday",
+                    "title" : "Crisp Tuna-Cabbage Salad",
+                    "price" : "13.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title fo65od 3 - friday",
-                    "price" : "price food 3 - frida435y",
-                    "isVegan" : false
-                }, 
-                {
-                    "title" : "title fo43od 3 - friday",
-                    "price" : "price food 3 - frid43ay",
+                    "title" : "Quinoa Salad with Cherries and Feta",
+                    "price" : "10.00",
                     "isVegan" : true
                 }, 
                 {
-                    "title" : "title foo23d 3 - friday",
-                    "price" : "price food 3 - fr34iday",
+                    "title" : "Chickpea Salad Sandwich",
+                    "price" : "9.00",
+                    "isVegan" : true
+                }, 
+                {
+                    "title" : "BLTA Wrap",
+                    "price" : "12.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title food847 3 - friday",
-                    "price" : "price food 3 -4567 friday",
+                    "title" : "Ham and Cheese Croissant",
+                    "price" : "11.00",
                     "isVegan" : false
                 }
             ]

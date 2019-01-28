@@ -9,7 +9,7 @@ class Header extends Component {
                     <h3>LunchBox!</h3>
                     <p>Please select below...</p>
                 </div>
-                <img src={headerImage}  className="header-image"/>
+                <div className="dark-header"></div>
             </div>
          );
     }
