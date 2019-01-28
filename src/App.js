@@ -105,6 +105,7 @@ class App extends Component {
     }
 
     unSelect = (e, day) => {
+        e.preventDefault();
         let removeItem = Object.assign({}, this.state.days)
         removeItem[day] = {}
         this.setState({

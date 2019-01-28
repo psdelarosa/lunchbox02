@@ -48,6 +48,7 @@ let ShoppingCartModal = props => {
         <React.Fragment>
         <div className={props.cartModal === false ? "cart-hide" : "show-cart"}>
             <div className="cart-list-container">
+            <h3>Your lunchbox</h3>
             {Object.keys(newCart).map((item) => 
                 <table className="cart-list" key={item + newCart[item].title} cellSpacing="0">
                     <tbody>
