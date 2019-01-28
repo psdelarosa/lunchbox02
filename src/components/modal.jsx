@@ -7,7 +7,9 @@ class Modal extends Component {
         return ( 
             <React.Fragment>
                 <div className={this.props.modalState === true ? "modal" : "modal-hidden"}>
-                    <div className="modal-image-box"></div>
+                    <div className="modal-image-box">
+                        <img src={this.props.image} />
+                    </div>
                     <div className="modal-text-box-container">
                         <div className="modal-text-box">
                             <h3>{this.props.modalTitle}</h3>

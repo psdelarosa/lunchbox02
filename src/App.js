@@ -11,9 +11,7 @@ import ShoppingCart from './components/cart'
 const check = require('./images/check.svg');
 
 // TODO:
-// style - header text
 // shopping cart... style and make modal
-// complete JSON file
 // fix opacity issue in firefox
 // mobile NAV
 // escape key in modal
@@ -21,6 +19,8 @@ const check = require('./images/check.svg');
 // Nutritional values from math.random
 // Format nutritional values
 // custom fonts
+// image loading circle placeholder
+
 
 
 
@@ -71,7 +71,8 @@ class App extends Component {
         itemCount: 0,
         modal: false,
         modalTitle: '',
-        modalPrice: ''
+        modalPrice: '',
+        modalImage: ''
         }
      this.setDay = this.setDay.bind(this)
      this.seclectClick = this.selectClick.bind(this)
@@ -123,11 +124,12 @@ class App extends Component {
         })
     }
 
-    openModal = (e, title, price) => {
+    openModal = (e, title, price, image) => {
         this.setState({
             modal: true,
             modalTitle: title,
-            modalPrice: price
+            modalPrice: price,
+            modalImage: image
         })
     }
 
@@ -177,9 +179,9 @@ class App extends Component {
             <DayMenu thisDay={this.state.selectedDay} />
             <FoodList items={this.state.foodItemsPerDay} selectedDay={this.state.selectedDay} open={this.openModal} clicker={this.selectClick} days={this.state.days} unSelect={this.unSelect}
             />
-            <Modal close={this.closeModal} modalState={this.state.modal} modalTitle={this.state.modalTitle} day={this.state.selectedDay} modalPrice={this.state.modalPrice} clicker={this.selectClick}/>
+            <Modal close={this.closeModal} modalState={this.state.modal} modalTitle={this.state.modalTitle} image={this.state.modalImage} day={this.state.selectedDay} modalPrice={this.state.modalPrice} clicker={this.selectClick}/>
         </div>
-        <ShoppingCart count={this.countItems()} cart={this.state.days}/>
+        <ShoppingCart removeItem={this.unSelect} count={this.countItems()} cart={this.state.days}/>
         <Subscribe />
         <Footer />
       </React.Fragment>

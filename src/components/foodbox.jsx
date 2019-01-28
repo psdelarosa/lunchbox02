@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
+
 let FoodBox = props => {
 
   return (
     <div  className={props.days[props.selectedDay].title === props.title ? "food-box-selected" : "food-box"}> 
       {props.vegan === true ? <div className="vegan">Vegan</div> : null}
-      <div className="food-image-box" onClick={(event, title, price) => props.open(event, props.title, props.price)}>
-        <img src={props.image} className="food-box-item-image"/>
+      <div className="food-image-box" onClick={(event, title, price, image) => props.open(event, props.title, props.price, props.image)}>
+        <img src={props.image} className="food-box-item-image" alt={props.title}/>
       </div>
       <div className="food-lower-box">
         <div className="food-text-box">

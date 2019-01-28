@@ -61,7 +61,7 @@
                 {
                     "title" : "Cobb Salad",
                     "price" : "11.00",
-                    "isVegan" : true,
+                    "isVegan" : false,
                     "image" : "../images/tuesday/cobb-salad.jpeg"
                 }, 
                 {
@@ -197,7 +197,7 @@
                 {
                     "title" : "Mediterranean Tuna Salad",
                     "price" : "11.00",
-                    "isVegan" : true,
+                    "isVegan" : false,
                     "image" : "../images/thursday/med-tuna-salad.jpg"
                 }
             ],
