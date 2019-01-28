@@ -10,17 +10,28 @@ import Footer from './components/footer'
 import ShoppingCart from './components/cart'
 const check = require('./images/check.svg');
 
+// TODO:
+// fix modal styling
+// header image and text
+// shopping cart... style and make modal
+// complete JSON file
+// fix opacity issue in firefox
+// mobile NAV
+// escape key in modal
+// DONE -- header image 
+// DONE -- integer float in shopping cart total
+
 
 const menuItems = days.days[0];
 
 let DaysNav = props => {
-    let mq = window.matchMedia( "(max-width: 1000px)" )
+    // let mq = window.matchMedia( "(max-width: 1000px)" )
 
-    let MobileNav = () => { 
-        return (
-        <div className="mobile-nav"><h3>test mobile nav</h3></div>
-        )
-    }
+    // let MobileNav = () => { 
+    //     return (
+    //     <div className="mobile-nav"><h3>test mobile nav</h3></div>
+    //     )
+    // }
 
     return (
         <div id="days-wrapper"  className={props.scroll > props.top ? "fixed-nav" : ""}>
@@ -38,7 +49,6 @@ let DaysNav = props => {
                 </li>
             )}
         </ul>
-        {mq.matches === true ? <MobileNav /> : null}
         </div>
     )
 }

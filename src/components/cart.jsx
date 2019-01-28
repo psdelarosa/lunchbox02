@@ -63,7 +63,7 @@ let ShoppingCartModal = props => {
                 </table> 
             )}
 
-            <div className="total-bill">Total bill: ${totalPrice}</div>
+            <div className="total-bill">Total bill: ${totalPrice.toFixed(2)}</div>
             <button onClick={props.closeModal}>close</button>
             </div>
         </div>

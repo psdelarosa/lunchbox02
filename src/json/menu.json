@@ -45,127 +45,127 @@
             ], 
             "TUESDAY" : [
                 {
-                    "title" : "title food 1 - tasdfuesday",
+                    "title" : "House Burger",
                     "price" : "7.50",
                     "isVegan" : false
                 },
                 {
-                    "title" : "title food 2 - tuzxcvesday",
-                    "price" : "11.63",
+                    "title" : "Cobb Salad",
+                    "price" : "11.00",
                     "isVegan" : true
                 }, 
                 {
-                    "title" : "title food 3 - tuasdesday",
-                    "price" : "10.25",
+                    "title" : "Jambalaya",
+                    "price" : "10.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title food 3 - tuaasdsdesday",
+                    "title" : "Mac & Cheese",
                     "price" : "11.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title zxcvfood 3 - tuesday",
-                    "price" : "8.25",
+                    "title" : "Fried Chicken",
+                    "price" : "8.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title fsdfood 3 - tuesday",
-                    "price" : "8",
+                    "title" : "Avocado Salad",
+                    "price" : "8.00",
                     "isVegan" : true
                 }, 
                 {
-                    "title" : "title food 3zxvc - tuesday",
+                    "title" : "Buffalo Wings",
                     "price" : "9.50",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title foasdod 3 - tuesday",
+                    "title" : "Bacon Mushroom Burger",
                     "price" : "10.00",
                     "isVegan" : false
                 }
             ],
             "WEDNESDAY" : [
                 {
-                    "title" : "title food 42361 - wednesday",
-                    "price" : "price foasdod 1 - wednesday",
+                    "title" : "Pizza Wrap",
+                    "price" : "12.00",
                     "isVegan" : false
                 },
                 {
-                    "title" : "title food 2 - w234ednesday",
-                    "price" : "price foo34d 2 - wednesday",
+                    "title" : "Chicken Salad",
+                    "price" : "11.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title food 3 - we634dnesday",
-                    "price" : "price food 3 - wednesday",
+                    "title" : "Shawarma Chicken Bowl",
+                    "price" : "13.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title food 3 - w234ednesday",
-                    "price" : "price food 3 - wednesday",
+                    "title" : "Pepperoni Panzanella",
+                    "price" : "12.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title food 3 - wednesday",
-                    "price" : "price fo23od 3 - wednesday",
+                    "title" : "Chicken and Avocado Pitta",
+                    "price" : "11.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title food 6433 - wednesday",
-                    "price" : "price food 2333 - wednesday",
+                    "title" : "Broccoli and Pesto Pasta",
+                    "price" : "13.00",
                     "isVegan" : true
                 }, 
                 {
-                    "title" : "title foo6234d 3 - wednesday",
-                    "price" : "price food234 3 - wednesday",
+                    "title" : "Pasta Salad",
+                    "price" : "12.00",
                     "isVegan" : true
                 }, 
                 {
-                    "title" : "title food234 3 - we7dnesday",
-                    "price" : "price food 43 - wedn54esday",
+                    "title" : "Spinach Lasagna",
+                    "price" : "10.00",
                     "isVegan" : false
                 }
             ],
             "THURSDAY" : [
                 {
-                    "title" : "title food 1 - thursd2ay",
-                    "price" : "price food 1 - thsdursday",
+                    "title" : "Burrito Bowls",
+                    "price" : "11.00",
                     "isVegan" : false
                 },
                 {
-                    "title" : "title food 2 - th23ursday",
-                    "price" : "price foods 2 - thursday",
+                    "title" : "Chicken Salad Sandwich",
+                    "price" : "10.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title food 3 - thursday",
-                    "price" : "price f123ood 3 - thursday",
+                    "title" : "Sausage Pesto Soup",
+                    "price" : "10.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title fo12od 3 - thursday",
-                    "price" : "pri12ce food 3 - thursday",
+                    "title" : "Mushroom & Broccoli Stir Fry",
+                    "price" : "13.00",
                     "isVegan" : true
                 }, 
                 {
-                    "title" : "title food 3 - thu12rsday",
-                    "price" : "price food 3 - thurs12day",
+                    "title" : "Kale, Farro, and Feta Salad",
+                    "price" : "14.00",
+                    "isVegan" : true
+                }, 
+                {
+                    "title" : "Lemony Chicken and Spinach Soup",
+                    "price" : "12.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title food 3 - thu42rsday",
-                    "price" : "price food 3 - t634hursday",
+                    "title" : "Roast Pork Sandwich",
+                    "price" : "11.00",
                     "isVegan" : false
                 }, 
                 {
-                    "title" : "title food 3 sed- thurs34day",
-                    "price" : "price food23 3 - thursday",
-                    "isVegan" : false
-                }, 
-                {
-                    "title" : "title food 3 - thursd345ay",
-                    "price" : "price f234ood 3 - thursday",
+                    "title" : "Mediterranean Tuna Salad",
+                    "price" : "11.00",
                     "isVegan" : true
                 }
             ],
