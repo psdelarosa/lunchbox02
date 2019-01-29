@@ -107,9 +107,9 @@ class App extends Component {
     }
 
     componentDidMount = () => {
-        const el = document.querySelector('#days-wrapper')
+        const el = document.querySelector('#days-wrapper, .mobile-nav')
         this.setState({
-            top: el.offsetTop ,
+            top: el.offsetTop,
             height: el.offsetHeight
         });
         window.addEventListener('scroll', this.handleScroll)
