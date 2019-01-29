@@ -8,9 +8,6 @@ import Footer from './components/footer'
 import ShoppingCart from './components/cart'
 import Navigation from './components/nav'
 
-
-
-
 const menuItems = days.days[0];
 
 class App extends Component {
