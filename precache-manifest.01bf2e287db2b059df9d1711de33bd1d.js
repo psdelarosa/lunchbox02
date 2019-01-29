@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/psdelarosa.github.io/lunchbox02/static/media/header-image.b5a176f4.jpg"
   },
   {
-    "revision": "75446b0ea7d003d1f053",
-    "url": "/psdelarosa.github.io/lunchbox02/static/css/main.e1b0c028.chunk.css"
+    "revision": "ad2e76a97fdd27673a6e",
+    "url": "/psdelarosa.github.io/lunchbox02/static/css/main.a7c3cb1d.chunk.css"
   },
   {
     "revision": "1c3066083d1317703a5e",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/psdelarosa.github.io/lunchbox02/static/media/close.ab30de06.svg"
   },
   {
-    "revision": "75446b0ea7d003d1f053",
-    "url": "/psdelarosa.github.io/lunchbox02/static/js/main.75446b0e.chunk.js"
+    "revision": "ad2e76a97fdd27673a6e",
+    "url": "/psdelarosa.github.io/lunchbox02/static/js/main.ad2e76a9.chunk.js"
   },
   {
     "revision": "7df89dc45b9b9806fba689e98dc14100",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/psdelarosa.github.io/lunchbox02/static/media/check.bd762bed.svg"
   },
   {
-    "revision": "a07b267b105edf3446fe2755936ff8ff",
+    "revision": "094801e43f45393cb8e0a98211691163",
     "url": "/psdelarosa.github.io/lunchbox02/index.html"
   }
 ];

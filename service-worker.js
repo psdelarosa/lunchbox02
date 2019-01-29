@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/psdelarosa.github.io/lunchbox02/precache-manifest.6bad7a41576d5657461783ddafe95b3c.js"
+  "/psdelarosa.github.io/lunchbox02/precache-manifest.01bf2e287db2b059df9d1711de33bd1d.js"
 );
 
 workbox.clientsClaim();
