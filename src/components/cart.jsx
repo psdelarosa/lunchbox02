@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const logo = require('../images/lunchbox.svg');
+
 const removeItem = require('../images/close.svg');
 
 class ShoppingCart extends Component {
@@ -38,7 +38,7 @@ let ShoppingCartModal = props => {
     //clear out empty days
     for (var x in props.cart) {
         if (props.cart[x].title === undefined) {
-            totalPrice = totalPrice
+            totalPrice += 0;
         } else {
             totalPrice += Number(props.cart[x].price)
             newCart[x] = {title: props.cart[x].title, price: props.cart[x].price}
@@ -58,7 +58,7 @@ let ShoppingCartModal = props => {
                         <tr key={newCart[item].price + newCart[item].title}>
                             <td className='table-title' key={newCart[item].title}>{newCart[item].title}</td>
                             <td className='table-price' key={newCart[item].price}>${newCart[item].price}</td>
-                            <td className="remove-item-td"><button className="remove-item"><img src={removeItem} width="20" onClick={(event, day) => props.removeItem(event, item)}/></button></td>
+                            <td className="remove-item-td"><button className="remove-item"><img src={removeItem} alt="remove item"width="20" onClick={(event, day) => props.removeItem(event, item)}/></button></td>
                         </tr>
                     </tbody>
                 </table> 

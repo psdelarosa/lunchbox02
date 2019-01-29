@@ -785,9 +785,22 @@ footer {
         margin-left: 10%;
     }
 
+    .cart-modal-close {
+        width: 100%;
+    }
+
+    .cart-modal-checkout {
+        width: 100%;
+    }
+
+    .modal {
+        margin-top: 20vh;
+        width: 90%;
+        margin-left: 5%;
+    }
+
 
 }
-
 
 @media only screen 
   and (max-width: 666px) {
@@ -799,20 +812,11 @@ footer {
         font-size: 2em;
     }
 
-    .modal {
-
-    }
-}
-
-@media only screen 
-  and (max-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    .days-list {
-      display: none;
+    .modal-text-box h3 {
+        font-size: 1em;
     }
 
-    .social-media {
-      display: none;
+    .modal-text-box p {
+        font-size: 0.8em;
     }
-
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavList from './components/nav'
 import Header from './components/header'
 import days from './json/menu.json'
 import DayMenu from './components/menulabel'
@@ -39,7 +38,6 @@ class App extends Component {
      this.seclectClick = this.selectClick.bind(this)
      this.handleScroll = this.handleScroll.bind(this)
      this.unSelect = this.unSelect.bind(this)
-     this.totalItems = this.totalItems.bind(this)
     }
 
     handleMobileNavClick = (e) => {
@@ -83,10 +81,6 @@ class App extends Component {
         })
     }
 
-    totalItems = () => {
-        let totalCount = 0;
-
-    }
 
     setDay = (e, day) => {
         this.setState({

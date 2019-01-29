@@ -8,7 +8,7 @@ class Modal extends Component {
             <React.Fragment>
                 <div className={this.props.modalState === true ? "modal" : "modal-hidden"}>
                     <div className="modal-image-box">
-                        <img src={this.props.image} />
+                        <img src={this.props.image} alt={this.props.modalTitle} />
                     </div>
                     <div className="modal-text-box-container">
                         <div className="modal-text-box">
@@ -17,7 +17,7 @@ class Modal extends Component {
                             <div className="modal-select-button-place">
                                 <button onClick={(event, day, title) => this.props.clicker(event, this.props.day, this.props.modalTitle)} className="modal-select-button">+</button>
                             </div>
-                            <div className="modal-close-button" onClick={this.props.close}><img src={closeIcon}  alt="close-button" className="modal-close-button" /></div>
+                            <div className="modal-close-button" onClick={this.props.close}><img src={closeIcon} alt="close-button" className="modal-close-button" /></div>
                         </div>
                     </div>
                 </div>
