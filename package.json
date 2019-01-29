@@ -2,7 +2,7 @@
   "name": "lunchbox02",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://psdelarosa.github.io/lunchbox02",
+  "homepage": "https://psdr03.github.io/lunchbox02",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.7.0",
