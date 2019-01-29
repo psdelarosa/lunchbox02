@@ -8,40 +8,12 @@ import FoodList from './components/foodbox'
 import Subscribe from './components/subscribe'
 import Footer from './components/footer'
 import ShoppingCart from './components/cart'
-const check = require('./images/check.svg');
+import Navigation from './components/nav'
+
 
 
 
 const menuItems = days.days[0];
-
-let DaysNav = props => {
-    // let mq = window.matchMedia( "(max-width: 1000px)" )
-
-    // let MobileNav = () => { 
-    //     return (
-    //     <div className="mobile-nav"><h3>test mobile nav</h3></div>
-    //     )
-    // }
-
-    return (
-        <div id="days-wrapper"  className={props.scroll > props.top ? "fixed-nav" : ""}>
-        <ul className="days-list" id="days-nav">
-            {Object.keys(props.days).map((day) => 
-                <li key={day} onClick={(event) => props.set(event, day)} className={props.selected === day ? "selected-button" : props.days[day].foodSelected === true ? "selected-button-success" : "days-button"}>
-                <div className={props.days[day].foodSelected === true ? "check" : "check-none"}>
-                    <img src={check}/>
-                </div>
-                <div>{day}<br />
-                    <div className="day-food-title">
-                        {(props.days[day].title === undefined ? null : (props.days[day].title.length > 18 ? props.days[day].title.substring(0,18) + '...' : props.days[day].title))}
-                    </div>
-                </div> 
-                </li>
-            )}
-        </ul>
-        </div>
-    )
-}
 
 class App extends Component {
   constructor(props) {
@@ -56,6 +28,7 @@ class App extends Component {
             THURSDAY: {},
             FRIDAY: {}
         },
+        mobileNav: false,
         itemCount: 0,
         modal: false,
         modalTitle: '',
@@ -67,6 +40,15 @@ class App extends Component {
      this.handleScroll = this.handleScroll.bind(this)
      this.unSelect = this.unSelect.bind(this)
      this.totalItems = this.totalItems.bind(this)
+    }
+
+    handleMobileNavClick = (e) => {
+        e.preventDefault();
+        if (this.state.mobileNav === false) {
+            this.setState({mobileNav: true})
+        } else {
+            this.setState({mobileNav: false})
+        }
     }
 
     countItems = () => {
@@ -136,13 +118,12 @@ class App extends Component {
     }
 
     componentDidMount = () => {
-        const el = document.querySelector('#days-wrapper')
+        const el = document.querySelectorAll('#days-wrapper, .mobile-nav')
         this.setState({
             top: el.offsetTop ,
             height: el.offsetHeight
         });
         window.addEventListener('scroll', this.handleScroll)
-        console.log(`top: ${this.state.top} height: ${this.state.height} offset top ${el.offsetTop}`)
     }
     componentDidUpdate() {
 		this.state.scroll > this.state.top ? 
@@ -155,13 +136,16 @@ class App extends Component {
     return (
       <React.Fragment>
 
-        <NavList />
         <Header/>
-        <DaysNav days={this.state.days} 
-                selected={this.state.selectedDay}
-                set={this.setDay} scroll={this.state.scroll} top={this.state.top}
-            />
-
+        <Navigation 
+            days={this.state.days} 
+            selected={this.state.selectedDay}
+            set={this.setDay} 
+            scroll={this.state.scroll} 
+            top={this.state.top}
+            handleMobile={this.handleMobileNavClick}
+            mobileStatus={this.state.mobileNav}
+        />
 
         <div id="wrapper">
 
