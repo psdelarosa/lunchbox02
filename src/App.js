@@ -4,7 +4,6 @@ import days from './json/menu.json'
 import DayMenu from './components/menulabel'
 import Modal from './components/modal'
 import FoodList from './components/foodbox'
-import Subscribe from './components/subscribe'
 import Footer from './components/footer'
 import ShoppingCart from './components/cart'
 import Navigation from './components/nav'
@@ -149,7 +148,7 @@ class App extends Component {
             <Modal close={this.closeModal} modalState={this.state.modal} modalTitle={this.state.modalTitle} image={this.state.modalImage} day={this.state.selectedDay} modalPrice={this.state.modalPrice} clicker={this.selectClick}/>
         </div>
         <ShoppingCart removeItem={this.unSelect} count={this.countItems()} cart={this.state.days}/>
-        <Subscribe />
+
         <Footer />
       </React.Fragment>
     );
