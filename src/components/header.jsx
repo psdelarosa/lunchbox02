@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-const headerImage = require('../images/header-image.jpg');
 
 class Header extends Component {
     render() { 

@@ -11,6 +11,7 @@ body {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 -moz-box-sizing: border-box;    /* Firefox, other Gecko */
 box-sizing: border-box;         /* Opera/IE 8+ */
+box-sizing: inherit;
   }
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
@@ -698,13 +699,56 @@ footer {
 }
 
 .mobile-nav {
-    height: 100px;
-    background-color: red;
-    width: 90vw;
+    height: auto;
+    background-color: #274C77;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    color: white;
+}
+
+.mobile-nav-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.burger {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.mobile-nav-list-day {
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+.mobile-nav-list-day-selected {
+    background-color: #aa305d;
+}
+
+.mobile-nav-list-hidden {
+    display: none;
+}
+
+.mobile-nav-button:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.mobile-nav-button:hover {
+    background-color: blue;
+    color: white;
 }
 
 @media only screen 
-  and (max-width: 1000px) {
+  and (max-width: 900px) {
     .modal {
       width: 80%;
       margin-left: 10%;
@@ -715,9 +759,8 @@ footer {
         margin-left: 25%;
     }
 
-    .social-media-list .icon-box {
-        width: 40px;
-        height: 40px;
+    #days-wrapper {
+        background-color: transparent;
     }
 
 }
@@ -742,9 +785,22 @@ footer {
         margin-left: 10%;
     }
 
+    .cart-modal-close {
+        width: 100%;
+    }
+
+    .cart-modal-checkout {
+        width: 100%;
+    }
+
+    .modal {
+        margin-top: 20vh;
+        width: 90%;
+        margin-left: 5%;
+    }
+
 
 }
-
 
 @media only screen 
   and (max-width: 666px) {
@@ -756,20 +812,11 @@ footer {
         font-size: 2em;
     }
 
-    .modal {
-
-    }
-}
-
-@media only screen 
-  and (max-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    .days-list {
-      display: none;
+    .modal-text-box h3 {
+        font-size: 1em;
     }
 
-    .social-media {
-      display: none;
+    .modal-text-box p {
+        font-size: 0.8em;
     }
-
 }
