@@ -15,7 +15,7 @@ class Modal extends Component {
                             <h3>{this.props.modalTitle}</h3>
                             <p>${this.props.modalPrice}</p>
                             <div className="modal-select-button-place">
-                                <button onClick={(event, day, title) => this.props.clicker(event, this.props.day, this.props.modalTitle)} className="modal-select-button">+</button>
+                                <button onClick={(event, day, title, price) => this.props.clicker(event, this.props.day, this.props.modalTitle, this.props.modalPrice)} className="modal-select-button">+</button>
                             </div>
                             <div className="modal-close-button" onClick={this.props.close}><img src={closeIcon} alt="close-button" className="modal-close-button" /></div>
                         </div>
