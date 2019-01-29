@@ -11,7 +11,7 @@ let FoodBox = props => {
       </div>
       <div className="food-lower-box">
         <div className="food-text-box">
-          <li key={props.title} className="food-title">{props.title.length > 20 ? props.title.substring(0,20)+'...' : props.title}</li>
+          <li key={props.title} className="food-title">{props.title.length > 20 ? props.title.substring(0,18)+'...' : props.title}</li>
           <li key={props.price} className="food-price">${props.price}</li>
         </div>
       <div className="select-button-place">

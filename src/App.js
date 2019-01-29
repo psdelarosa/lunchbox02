@@ -10,18 +10,6 @@ import Footer from './components/footer'
 import ShoppingCart from './components/cart'
 const check = require('./images/check.svg');
 
-// TODO:
-// shopping cart... style and make modal
-// fix opacity issue in firefox
-// mobile NAV
-// escape key in modal
-// Check out button inside shopping cart
-// Nutritional values from math.random
-// Format nutritional values
-// custom fonts
-// image loading circle placeholder
-
-
 
 
 const menuItems = days.days[0];
