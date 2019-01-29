@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/psdelarosa.github.io/lunchbox02/precache-manifest.01bf2e287db2b059df9d1711de33bd1d.js"
+  "/lunchbox02/precache-manifest.d77dcdad16131810bb216dde525a7078.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/psdelarosa.github.io/lunchbox02/index.html", {
+workbox.routing.registerNavigationRoute("/lunchbox02/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
