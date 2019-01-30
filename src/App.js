@@ -103,7 +103,7 @@ class App extends Component {
     }
 
     componentDidMount = () => {
-        const el = document.querySelector('#days-wrapper, .mobile-nav')
+        const el = document.querySelectorAll('#days-wrapper, .mobile-nav')
         this.setState({
             top: el.offsetTop,
             height: el.offsetHeight
