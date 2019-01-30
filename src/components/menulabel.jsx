@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const logo = require('../images/lunchbox.svg');
 
-class DayMenu extends Component {
+class DayMenu extends React.PureComponent {
     render() { 
         return ( 
             <div className="day-menu-box">

@@ -30,10 +30,7 @@ class App extends Component {
         modalPrice: '',
         modalImage: ''
         }
-     this.setDay = this.setDay.bind(this)
-     this.seclectClick = this.selectClick.bind(this)
-     this.handleScroll = this.handleScroll.bind(this)
-     this.unSelect = this.unSelect.bind(this)
+        // this.countItems = this.countItems.bind(this)
     }
 
     handleMobileNavClick = (e) => {
@@ -48,15 +45,14 @@ class App extends Component {
     countItems = () => {
         let count = 0;
         for (var x in this.state.days) {
-            if (this.state.days[x].title === undefined) {
-                count += 0
-            } else {
+            if (this.state.days[x].title) {
                 count += 1
             }
         }
         return count
-    }
 
+    }
+    
     selectClick = (e, day, title, price) => {
         e.preventDefault();
         let newState = Object.assign({}, this.state.days)
@@ -113,12 +109,13 @@ class App extends Component {
             height: el.offsetHeight
         });
         window.addEventListener('scroll', this.handleScroll)
+
     }
-    componentDidUpdate() {
+    componentDidUpdate = () => {
 		this.state.scroll > this.state.top ? 
 			document.querySelector('#wrapper').style.paddingTop = `${this.state.height}px` :
-			document.querySelector('#wrapper').style.paddingTop = 0;
-	}
+            document.querySelector('#wrapper').style.paddingTop = 0;
+    }
 
 
   render() {

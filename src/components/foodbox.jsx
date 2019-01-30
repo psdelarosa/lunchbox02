@@ -34,7 +34,7 @@ let UnSelect = props => {
     )
 }
 
-class FoodList extends Component {
+class FoodList extends React.PureComponent {
     state = {  }
     render() { 
         return ( 

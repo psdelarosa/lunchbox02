@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const removeItem = require('../images/close.svg');
 
-class ShoppingCart extends Component {
+class ShoppingCart extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = { 
@@ -37,13 +37,12 @@ let ShoppingCartModal = props => {
 
     //clear out empty days
     for (var x in props.cart) {
-        if (props.cart[x].title === undefined) {
-            totalPrice += 0;
-        } else {
+        if (props.cart[x].title) {
             totalPrice += Number(props.cart[x].price)
             newCart[x] = {title: props.cart[x].title, price: props.cart[x].price}
-        }
+        } 
     }
+
     return (
         <React.Fragment>
         <div className={props.cartModal === false ? "cart-hide" : "show-cart"}>
