@@ -20,19 +20,19 @@ self.__precacheManifest = [
     "url": "/lunchbox02/static/js/runtime~main.d16af815.js"
   },
   {
-    "revision": "40639226ebbdd72b3e76",
-    "url": "/lunchbox02/static/js/main.40639226.chunk.js"
+    "revision": "8a753e1c0c95146d268e",
+    "url": "/lunchbox02/static/js/main.8a753e1c.chunk.js"
   },
   {
     "revision": "f862742eb78a97248776",
     "url": "/lunchbox02/static/js/1.f862742e.chunk.js"
   },
   {
-    "revision": "40639226ebbdd72b3e76",
+    "revision": "8a753e1c0c95146d268e",
     "url": "/lunchbox02/static/css/main.e00778b3.chunk.css"
   },
   {
-    "revision": "6322811900d3b9e7e6bcf2f5104c9cea",
+    "revision": "c4d6690c57b3ce8368745a2ba4144424",
     "url": "/lunchbox02/index.html"
   }
 ];
